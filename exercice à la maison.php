@@ -30,28 +30,5 @@ echo "le trie en ordre croissant des prix ".implode(",",$produits)."<br>";
 ksort($produits);
 echo "le trie en ordre croissant du tableau associatif produits selon leur nom". implode(",",$produits);
 ?>
-<h2>execice 4</h2>
-<?php
-$etudiants=[
-["nom"=>"ben ali","prenom"=>"ali","notes"=>[10,20,19]],
-["nom"=>"ben fatma","prenom"=>"fatma","notes"=>[13,14,16]],
-["nom"=>"ben ibrahim","prenom"=>"saif","notes"=>[19,17,18]]];
-echo "<table border=1>";
-echo"<td><tr>nom </tr><tr>prenom </tr><tr>notes </tr><br></td>";
-foreach ($etudiants as $etd){
-    echo"<td>";
-    echo"<tr>".$etd["nom"]."</tr>";
-    echo"<tr>".$etd["prenom"]."</tr>";
-    echo"<tr>".implode(",",$etd["notes"])."<br></tr>";
-    echo "</tr>";}
-$Moy=[];
-for($i=1;$i<=count($etudiants);$i++){
-    $etd=$etudiants[$i];
-    $Moy[$i]=0;
-    foreach($etd["notes"]as $N)
-    $Moy[$i]+=$N;
-    $Moy[$i]=$Moy[$i]/count ($etd["notes"]);
-    echo "la moyenne de l'etudiant ".$etd["nom"]." est ".$Moy[$i]."<br>";}
-?>
 
 
