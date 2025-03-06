@@ -25,7 +25,8 @@ for($i=1;$i<=count($etudiants);$i++){
     foreach($etudiants [$etd]["notes"]as $N)
     $Moy[$i]+=$N;
     $Moy[$i]=$Moy[$i]/count ($etudiants[$etd]["notes"]);
-    echo "la moyenne de l'etudiant ".$etudiants[$etd]["nom"]. " est ".$Moy[$i]."<br>";}?>
+    echo "la moyenne de l'etudiant ".$etudiants[$etd]["nom"]. " est ".$Moy[$i]."<br>";}
+    ?>
 <h2> la moyenne maximale </h2>
 <?php
 max($Moy);
